@@ -506,7 +506,7 @@ safetensors==0.4.5
 scipy==1.14.1
     # via layoutparser
     # via onnxtr
-setuptools==75.5.0
+setuptools==75.5.0 ; python_full_version >= '3.12'
     # via torch
 shapely==2.0.6
     # via onnxtr

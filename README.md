@@ -71,6 +71,22 @@ print(response)
 megaparse.save("./test.md")
 
 ```
+
+### MegaParse Vision
+
+```python
+import os
+from megaparse import MegaParse
+from langchain_openai import ChatOpenAI
+from megaparse.parser.megaparse_vision import MegaParseVision
+
+model = ChatOpenAI(model="gpt-4o", api_key=os.getenv("OPENAI_API_KEY"))
+parser = MegaParseVision(model=model)
+megaparse = MegaParse(parser)
+megaparse.load("./arquivo.pdf")
+megaparse.save("./arquivo.md")
+```
+
 **Note**: The model supported by MegaParse Vision are the multimodal ones such as claude 3.5, claude 4, gpt-4o and gpt-4.
 
 ## Use as an API
